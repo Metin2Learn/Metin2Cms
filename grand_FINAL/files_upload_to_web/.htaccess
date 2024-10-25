@@ -1,0 +1,33 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+RewriteRule ^([^/]*)$ index.php?page=$1 [QSA]
+RewriteRule ^team/([a-zA-Z0-9]+)/?$ index.php?page=team&cat=$1 [QSA,L]
+RewriteRule ^itemshop/cat/([a-zA-Z0-9]+)/?$ index.php?page=itemshop&cat=$1 [QSA,L]
+RewriteRule ^itemshop/cat/([^/]*)/buy/([^/]*)$ index.php?page=itemshop&cat=$1&buy=$2 [L]
+RewriteRule ^itemshop/cat/([^/]*)/page/([^/]*)$ index.php?page=itemshop&cat=$1&pagination=$2 [L]
+RewriteRule ^news/([a-zA-Z0-9]+)/?$ index.php?page=news&pagination=$1 [QSA,L]
+RewriteRule ^news/full/([a-zA-Z0-9]+)/?$ index.php?page=news&id=$1 [QSA,L]
+RewriteRule ^register/ref/([a-zA-Z0-9]+)/?$ index.php?page=register&ref=$1 [QSA,L]
+RewriteRule ^lost-pw/user/([^/]*)/token/([^/]*)$ index.php?page=lost-pw&user=$1&token=$2 [L]
+RewriteRule ^news/full/([^/]*)/comments/([^/]*)$ index.php?page=news&id=$1&comments_page=$2 [L]
+RewriteRule ^download/([a-zA-Z0-9]+)/?$ index.php?page=download&pagination=$1 [QSA,L]
+RewriteRule ^ticket-view/([a-zA-Z0-9]+)/?$ index.php?page=ticket-view&pagination=$1 [QSA,L]
+RewriteRule ^ticket-view/id/([a-zA-Z0-9]+)/?$ index.php?page=ticket-view&id=$1 [QSA,L]
+RewriteRule ^players/([a-zA-Z0-9]+)/?$ index.php?page=players&pagination=$1 [QSA,L]
+RewriteRule ^referral-rewards/page/([a-zA-Z0-9]+)/?$ index.php?page=referral-rewards&pagination=$1 [QSA,L]
+RewriteRule ^referral-rewards/buy/([a-zA-Z0-9]+)/?$ index.php?page=referral-rewards&buy=$1 [QSA,L]
+RewriteRule ^guilds/([a-zA-Z0-9]+)/?$ index.php?page=guilds&pagination=$1 [QSA,L]
+RewriteRule ^player/([a-zA-Z0-9]+)/?$ index.php?page=player&id=$1 [QSA,L]
+RewriteRule ^change-pw/([a-zA-Z0-9]+)/?$ index.php?page=change-pw&finish=$1 [QSA,L]
+RewriteRule ^change-email/([a-zA-Z0-9]+)/?$ index.php?page=change-email&finish=$1 [QSA,L]
+RewriteRule ^chars/([a-zA-Z0-9]+)/?$ index.php?page=chars&player=$1 [QSA,L]
+RewriteRule ^viewpage/([a-zA-Z0-9]+)/?$ index.php?page=viewpage&id=$1 [QSA,L]
+RewriteRule ^coins/delete/([a-zA-Z0-9]+)/?$ index.php?page=coins&delete=$1 [QSA,L]
+RewriteRule ^coins/delete/amazon/([a-zA-Z0-9]+)/?$ index.php?page=coins&delete_amazon=$1 [QSA,L]
+
+
+ErrorDocument 404 http://localhost/mt2grand-cms/error
