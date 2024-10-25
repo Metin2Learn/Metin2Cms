@@ -1,0 +1,22 @@
+{
+   "general":{
+      "title":"Metin2 CMS",
+      "news":"5",
+	  "paypal":""
+   },
+   "links":{
+      "forum":"",
+      "support":"https:\/\/metin2cms.cf\/contact",
+      "item-shop":""
+   },
+   "social-links":{
+      "youtube":"",
+      "facebook":"",
+      "twitter":"",
+      "tumblr":"",
+      "flickr":"",
+      "discord":"",
+      "rss":"",
+      "twitchtv":""
+   }
+}
